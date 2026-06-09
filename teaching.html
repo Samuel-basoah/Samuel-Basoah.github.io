@@ -80,6 +80,72 @@
     nav a{white-space:nowrap;font-size:14px}
     body{font-size:17px}
   }
+
+  .hero-profile{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    padding:42px 0 10px;
+    flex-wrap:wrap;
+  }
+  .hero-profile img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:14px;
+    border:4px solid var(--soft);
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+  }
+  .hero-profile .hero-text{
+    max-width:600px;
+  }
+  .hero-profile .hero-text h1{
+    font-family:'Newsreader',serif;
+    font-size:42px;
+    margin-bottom:10px;
+    color:var(--ink);
+  }
+  .hero-profile .hero-text p{
+    font-size:18px;
+    color:var(--muted);
+    line-height:1.7;
+  }
+
+
+  .hero-banner{
+    position:relative;
+    height:420px;
+    margin-bottom:30px;
+    border-radius:0 0 18px 18px;
+    overflow:hidden;
+    background:
+      linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+      url('54884608539_897fa8c7b8_q.jpg') center top/cover no-repeat;
+    display:flex;
+    align-items:flex-end;
+  }
+  .hero-overlay{
+    padding:42px;
+    color:white;
+    max-width:760px;
+  }
+  .hero-overlay h1{
+    font-family:'Newsreader',serif;
+    font-size:54px;
+    margin-bottom:12px;
+    line-height:1.05;
+  }
+  .hero-overlay p{
+    font-size:20px;
+    line-height:1.7;
+    color:rgba(255,255,255,.92);
+  }
+  @media(max-width:680px){
+    .hero-banner{height:320px}
+    .hero-overlay h1{font-size:38px}
+    .hero-overlay p{font-size:17px}
+  }
+
 </style>
 </head>
 <body>
@@ -109,7 +175,21 @@
   </div>
 </header>
 
+
+
 <main>
+  <div class="hero-banner">
+    <div class="hero-overlay">
+      <h1>Teaching at Simon Fraser University</h1>
+      <p>
+        Award-winning Teaching Assistant and Ph.D. Candidate in Economics specializing in macroeconomics,
+        international finance, public economics, econometrics, and interdisciplinary teaching.
+      </p>
+    </div>
+  </div>
+
+  
+
   <section>
     <h2 class="sec">Teaching Philosophy</h2>
     <div class="philosophy">
