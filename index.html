@@ -80,6 +80,11 @@
   .social-icons{display:flex;gap:16px;justify-content:center}
   .social-icons a{color:var(--muted);border:none;line-height:0}
   .social-icons a:hover{color:var(--sfu-red)}
+  /* gentle rotation on hover for LinkedIn icon */
+  @keyframes spin-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  .social-icons a.spin svg{transition:transform .3s}
+  .social-icons a.spin:hover svg{animation:spin-slow 6s linear infinite;transform-origin:50% 50%}
+  @media(prefers-reduced-motion:reduce){.social-icons a.spin:hover svg{animation:none}}
 
   /* Fields + contact row */
   .info-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:42px 0;border-bottom:1px solid var(--line)}
@@ -148,7 +153,7 @@
         <li><a href="index.html#research">Research</a></li>
         <li><a href="ml.html">ML / NLP</a></li>
         <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="experience.html">Industry & Research </a></li>
+        <li><a href="experience.html">Industry &amp; Research</a></li>
       </ul>
     </nav>
   </div>
@@ -165,8 +170,8 @@
       <div class="field-line"><span class="lbl">Secondary</span> Environmental Economics, Applied Time Series (Bayesian) Econometrics, Applied Artificial Intelligence </div>
 
       <h2 class="flank-h" style="margin-top:26px">References</h2>
-      <div class="ref-mini"><strong>Prof. Luba Petersen </strong> <br><a href="mailto:a.one@sfu.ca">luba_petersen@sfu.ca</a></div>
-      <div class="ref-mini"><strong>Prof. Minjie Deng </strong><br><a href="mailto:b.two@sfu.ca">minjied@sfu.ca</a></div>
+      <div class="ref-mini"><strong>Prof. Luba Petersen </strong> <br><a href="mailto:luba_petersen@sfu.ca">luba_petersen@sfu.ca</a></div>
+      <div class="ref-mini"><strong>Prof. Minjie Deng </strong><br><a href="mailto:minjied@sfu.ca">minjied@sfu.ca</a></div>
 
       <h2 class="flank-h" style="margin-top:26px">Contact</h2>
       <div class="contact-block">
@@ -185,7 +190,7 @@
         <a href="#">SSRN</a>
       </div>
       <div class="social-icons">
-        <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a class="spin" href="https://www.linkedin.com/in/samuel-basoah-42323a180/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
         <a href="#" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg></a>
       </div>
     </div>
@@ -209,7 +214,7 @@ Using event-study methods, I show that financial markets respond systematically 
 
 I next examine the real effects of supervisory sentiment on bank outcomes using bank-level panel regressions and identified supervisory sentiment shocks. More positive sentiment improves profitability, liquidity, asset quality, and capital adequacy, while reducing non-performing assets and loan-loss reserves. The evidence suggests that supervisory communication operates through depositor confidence and flight-to-quality channels, generating deposit inflows and stronger balance sheet positions for perceived safer banks. Local projection estimates show that positive supervisory shocks generate persistent improvements in bank balance sheets, particularly among large banks.
 
-Finally, I study whether supervisory sentiment predicts bank failure. Logistic models controlling for CAMELS indicators, macroeconomic conditions, and crisis periods show that more positive supervisory sentiment significantly lowers the probability of bank failure in the United States by approximately 5%. The effects are strongest for large banks, consistent with informational advantages and “too-big-to-fail” dynamics.
+Finally, I study whether supervisory sentiment predicts bank failure. Logistic models controlling for CAMELS indicators, macroeconomic conditions, and crisis periods show that more positive supervisory sentiment significantly lowers the probability of bank failure in the United States by approximately 5%. The effects are strongest for large banks, consistent with informational advantages and &ldquo;too-big-to-fail&rdquo; dynamics.
 
 Overall, the findings suggest that supervisory communication is an important and underexplored channel through which regulators influence bank behavior and financial stability.</p>
       <div class="links">
@@ -230,15 +235,14 @@ Overall, the findings suggest that supervisory communication is an important and
       <div class="paper-links"><a href="#">PDF</a><a href="#">SSRN</a></div>
     </div>
     <div class="paper">
-      <h3>When Sovereigns Fear Default: Why
-Central Banks Turn to Gold </h3>
+      <h3>When Sovereigns Fear Default: Why Central Banks Turn to Gold </h3>
       <div class="status">Working Paper, 2026</div>
       <p class="abstract"> This study investigates how sovereign default risk, measured by the Emerging Market Bond Index (EMBI), affects the composition of central bank reserves, with a particular focus on gold holdings. Using a panel of 52 countries from 1997 to 2020, the study employs dynamic panel GMM, local projections, and instrumental-variable Tobit estimators to examine the response of the gold share of central bank reserves to changes in sovereign default risk. Drawing on a newly constructed dataset of country-level reserve currency composition, the analysis examines how sovereign default risk shapes the gold share of reserves while controlling for the currency composition of reserves and external debt. The results show that a surge in sovereign default risk is associated with a significant increase in the gold share of reserves, consistent with a precautionary reserve management rationale. The findings remain robust to controlling for foreign-currency debt exposure, including U.S. dollar- and SDR-denominated debt. Local projection estimates indicate that this increase persists for up to two years following a default risk shock. The effect is stronger in countries with fixed exchange rate regimes and lower central bank independence, suggesting that constraints on monetary autonomy amplify reliance on gold as a hedge against sovereign risk. The results further suggest that global financial uncertainty and domestic financial distress reinforce reserve allocation toward gold during periods of elevated sovereign risk. These findings highlight how central banks adjust the composition of their reserves, through gold in particular, in response to sovereign and external financial risk.</p>
       <div class="paper-links"><a href="#">PDF</a></div>
     </div>
     <div class="subhead" style="margin-top:30px">Works in Progress</div>
     <div class="paper">
-      <h3>Wildfire Risk Information and Public Preparedness in British Columbia: A Randomized Controlled Trial (RCT) Approach (With Prof. Luba Petersen)</h3>
+      <h3>Wildfire Risk Information and Public Preparedness in British Columbia: A Randomized Controlled Trial (RCT) Approach (with Prof. Luba Petersen)</h3>
       <div class="status">Status: Survey rollout phase</div>
     </div>
     <div class="paper">
