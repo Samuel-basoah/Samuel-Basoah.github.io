@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --ink:#1a1a1a;
@@ -21,25 +22,78 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    background:var(--paper);color:var(--ink);
-    font-family:'Spectral',Georgia,serif;font-size:18px;line-height:1.65;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Spectral',Georgia,serif;
+    font-size:18px;
+    line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
-  a{color:var(--sfu-dark-red);text-decoration:none;border-bottom:1px solid rgba(166,25,46,.25);transition:border-color .2s,color .2s}
+  a{
+    color:var(--sfu-dark-red);
+    text-decoration:none;
+    border-bottom:1px solid rgba(166,25,46,.25);
+    transition:border-color .2s,color .2s;
+  }
   a:hover{border-color:var(--sfu-dark-red);color:var(--sfu-red)}
 
   .topbar{background:var(--sfu-red);padding:10px 0}
-  .topbar-inner{max-width:var(--maxw);margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:14px}
-  .wordmark{font-family:'Newsreader',serif;font-weight:600;font-size:18px;letter-spacing:.5px;color:#fff;border:none}
+  .topbar-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .wordmark{
+    font-family:'Newsreader',serif;
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:.5px;
+    color:#fff;
+    border:none;
+  }
   .wordmark:hover{color:#fff;border:none;opacity:.9}
   .wordmark .sfu{font-weight:700}
 
-  header{border-bottom:2px solid var(--sfu-red);background:var(--paper);position:sticky;top:0;z-index:10}
-  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:20px 28px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px}
-  .namewrap .brand{font-family:'Newsreader',serif;font-size:26px;font-weight:600;color:var(--ink);border:none;display:block;line-height:1.1}
+  header{
+    border-bottom:2px solid var(--sfu-red);
+    background:var(--paper);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  .nav-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:20px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .namewrap .brand{
+    font-family:'Newsreader',serif;
+    font-size:26px;
+    font-weight:600;
+    color:var(--ink);
+    border:none;
+    display:block;
+    line-height:1.1;
+  }
   .namewrap .sub{font-style:italic;color:var(--muted);font-size:16px}
   nav ul{list-style:none;display:flex;gap:24px;flex-wrap:wrap}
-  nav a{font-family:'Newsreader',serif;font-size:15px;color:var(--muted);border:none;letter-spacing:.3px;padding-bottom:3px;border-bottom:2px solid transparent}
+  nav a{
+    font-family:'Newsreader',serif;
+    font-size:15px;
+    color:var(--muted);
+    border:none;
+    letter-spacing:.3px;
+    padding-bottom:3px;
+    border-bottom:2px solid transparent;
+  }
   nav a:hover{color:var(--sfu-red)}
   nav a.active{color:var(--sfu-red);border-bottom-color:var(--sfu-red)}
 
@@ -47,7 +101,15 @@
 
   section{padding:46px 0;border-bottom:1px solid var(--line)}
   section:last-of-type{border-bottom:none}
-  h2.sec{font-family:'Newsreader',serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--sfu-red);margin-bottom:8px}
+  h2.sec{
+    font-family:'Newsreader',serif;
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--sfu-red);
+    margin-bottom:8px;
+  }
   .role-line{font-size:16px;color:var(--muted);margin-bottom:30px}
 
   .philosophy{font-size:17px;line-height:1.7;max-width:74ch;margin-bottom:34px}
@@ -88,17 +150,21 @@
     background:#fff;
     transition:all .2s ease;
     margin-right:6px;
+    margin-bottom:8px;
   }
   .docs a:hover{
     border-color:var(--sfu-red);
     background:var(--soft);
   }
 
-  footer{max-width:var(--maxw);margin:0 auto;padding:30px 28px 56px;color:var(--muted);font-size:14px;font-family:'Newsreader',serif}
-
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+  footer{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:30px 28px 56px;
+    color:var(--muted);
+    font-size:14px;
+    font-family:'Newsreader',serif;
+  }
 
   @media(max-width:680px){
     .nav-inner{flex-direction:column;align-items:flex-start;gap:10px}
@@ -109,11 +175,14 @@
   }
 </style>
 </head>
+
 <body>
 
 <div class="topbar">
   <div class="topbar-inner">
-    <a class="wordmark" href="https://www.sfu.ca/" target="_blank" rel="noopener"><span class="sfu">SFU</span> &nbsp;Simon Fraser University</a>
+    <a class="wordmark" href="https://www.sfu.ca/" target="_blank" rel="noopener">
+      <span class="sfu">SFU</span> &nbsp;Simon Fraser University
+    </a>
   </div>
 </div>
 
@@ -123,6 +192,7 @@
       <a href="index.html" class="brand">Samuel Basoah</a>
       <span class="sub">Ph.D. Candidate in Economics</span>
     </div>
+
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -137,10 +207,12 @@
 </header>
 
 <main>
+
   <section>
     <h2 class="sec">Teaching Philosophy</h2>
+
     <div class="philosophy">
-      <p>My teaching philosophy is grounded in the belief that effective education empowers and transforms students, equipping them not only with knowledge but with the critical tools to solve real world problems. I have served as a Teaching Assistant for 24 courses across 24 terms and play an active role in my department&rsquo;s study nights, workshops, and mentoring programs for students and new Teaching Assistants. My teaching interests include macroeconomics, international finance and trade, intermediate microeconomics, money and banking, public economics, econometrics, and environmental economics.</p>
+      <p>My teaching philosophy is grounded in the belief that effective education empowers and transforms students, equipping them not only with knowledge but with the critical tools to solve real-world problems. I have served as a Teaching Assistant for 24 courses across 24 terms and play an active role in my department&rsquo;s study nights, workshops, and mentoring programs for students and new Teaching Assistants. My teaching interests include macroeconomics, international finance and trade, intermediate microeconomics, money and banking, public economics, econometrics, and environmental economics.</p>
 
       <p>Since Fall 2022, I have served as a Head Teaching Assistant responsible for supporting and mentoring fellow TAs, and since 2024 I lead and co-organize the Economics Department&rsquo;s workshops for incoming Teaching Assistants. I have mentored 15 Teaching Assistants and consistently rank among the top five in the department&rsquo;s TA evaluations. In Spring 2026, I was nominated by SFU&rsquo;s Centre for Educational Excellence to present on how to run tutorials confidently, fairly, and professionally.</p>
     </div>
@@ -152,17 +224,18 @@
       <a href="https://www.sfu.ca/fass/news/2025/09/teaching-awards.html" target="_blank" rel="noopener">FASS Employee Achievement Award &ndash; Teaching Assistant</a> (2025)
       &middot;
       <a href="https://www.facebook.com/SFUEconomics/mentions/" target="_blank" rel="noopener">Video</a>
-      </div>
-      <div class="awards-callout" style="margin-top:28px;">
+    </div>
+
+    <div class="awards-callout" style="margin-top:28px;">
       <strong>Selected Teaching Evaluation Results:</strong><br>
       Ranked <strong>1st of 46</strong> Teaching Assistants (Spring 2024),
       <strong>4th of 20</strong> (Summer 2024),
       <strong>9th of 40</strong> (Spring 2025), and
       <strong>3rd of 16</strong> (Summer 2025).
     </div>
-    </div>
-     <p class="docs">
-      <a href="teaching-statement.pdf" target="_blank" rel="noopener">Teaching Statement (PDF)</a>
+
+    <p class="docs">
+      <a href="Teaching_Statement_Finale.pdf" target="_blank" rel="noopener">Teaching Statement (PDF)</a>
       <a href="Teaching_evaluation.pdf" target="_blank" rel="noopener">Teaching Evaluations (PDF)</a>
     </p>
   </section>
@@ -198,6 +271,7 @@
       <a href="index.html">&larr; Back to home</a>
     </p>
   </section>
+
 </main>
 
 <footer>&copy; 2026 Samuel Basoah &middot; Simon Fraser University &middot; Last updated June 2026</footer>
