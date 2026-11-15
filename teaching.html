@@ -1,290 +1,817 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Teaching — Samuel Basoah</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  :root{
-    --ink:#1a1a1a;
-    --muted:#54585a;
-    --line:#e2e2e2;
-    --paper:#ffffff;
-    --sfu-red:#CC0633;
-    --sfu-dark-red:#A6192E;
-    --soft:#faf3f4;
-    --maxw:1040px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Spectral',Georgia,serif;
-    font-size:18px;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{
-    color:var(--sfu-dark-red);
-    text-decoration:none;
-    border-bottom:1px solid rgba(166,25,46,.25);
-    transition:border-color .2s,color .2s;
-  }
-  a:hover{border-color:var(--sfu-dark-red);color:var(--sfu-red)}
 
-  .topbar{background:var(--sfu-red);padding:10px 0}
-  .topbar-inner{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:0 28px;
-    display:flex;
-    align-items:center;
-    gap:14px;
-  }
-  .wordmark{
-    font-family:'Newsreader',serif;
-    font-weight:600;
-    font-size:18px;
-    letter-spacing:.5px;
-    color:#fff;
-    border:none;
-  }
-  .wordmark:hover{color:#fff;border:none;opacity:.9}
-  .wordmark .sfu{font-weight:700}
+/* =================================
+   ACADEMIC WEBSITE COLOUR PALETTE
+   ================================= */
 
-  header{
-    border-bottom:2px solid var(--sfu-red);
-    background:var(--paper);
-    position:sticky;
-    top:0;
-    z-index:10;
-  }
-  .nav-inner{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:20px 28px;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    flex-wrap:wrap;
-    gap:14px;
-  }
-  .namewrap .brand{
-    font-family:'Newsreader',serif;
-    font-size:26px;
-    font-weight:600;
-    color:var(--ink);
-    border:none;
-    display:block;
-    line-height:1.1;
-  }
-  .namewrap .sub{font-style:italic;color:var(--muted);font-size:16px}
-  nav ul{list-style:none;display:flex;gap:24px;flex-wrap:wrap}
-  nav a{
-    font-family:'Newsreader',serif;
-    font-size:15px;
-    color:var(--muted);
-    border:none;
-    letter-spacing:.3px;
-    padding-bottom:3px;
-    border-bottom:2px solid transparent;
-  }
-  nav a:hover{color:var(--sfu-red)}
-  nav a.active{color:var(--sfu-red);border-bottom-color:var(--sfu-red)}
+:root {
+    --ink: #222222;
+    --muted: #555555;
+    --line: #e2e2e2;
+    --paper: #ffffff;
+    --accent: #800020;
+    --accent-dark: #650019;
+    --soft: #f7f7f7;
+    --maxw: 1080px;
+}
 
-  main{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  section{padding:46px 0;border-bottom:1px solid var(--line)}
-  section:last-of-type{border-bottom:none}
-  h2.sec{
-    font-family:'Newsreader',serif;
-    font-size:13px;
-    font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    color:var(--sfu-red);
-    margin-bottom:8px;
-  }
-  .role-line{font-size:16px;color:var(--muted);margin-bottom:30px}
+html {
+    scroll-behavior: smooth;
+}
 
-  .philosophy{font-size:17px;line-height:1.7;max-width:74ch;margin-bottom:34px}
-  .philosophy p{margin-bottom:14px}
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Spectral', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
 
-  .awards-callout{
-    background:var(--soft);
-    border-left:3px solid var(--sfu-red);
-    padding:14px 20px;
-    margin:22px 0 4px;
-    font-size:15px;
-    line-height:1.6;
-  }
-  .awards-callout strong{color:var(--sfu-dark-red)}
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(128, 0, 32, 0.20);
+    transition: color .2s, border-color .2s;
+}
 
-  .area{
-    font-family:'Newsreader',serif;
-    font-size:13px;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    color:var(--sfu-red);
-    font-weight:600;
-    margin:28px 0 12px;
-  }
-  .course{margin-bottom:12px}
-  .course .code{font-family:'Newsreader',serif;font-size:18px;font-weight:600}
-  .course .yrs{color:var(--muted);font-size:15px}
+a:hover {
+    color: var(--accent-dark);
+    border-bottom-color: var(--accent-dark);
+}
 
-  .docs{
-    margin-top:24px;
-    font-size:15px;
-  }
-  .docs a{
-    display:inline-block;
-    padding:8px 14px;
-    border:1px solid var(--line);
-    border-radius:4px;
-    background:#fff;
-    transition:all .2s ease;
-    margin-right:6px;
-    margin-bottom:8px;
-  }
-  .docs a:hover{
-    border-color:var(--sfu-red);
-    background:var(--soft);
-  }
+/* =================================
+   UNIVERSITY TOP BAR
+   ================================= */
 
-  footer{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:30px 28px 56px;
-    color:var(--muted);
-    font-size:14px;
-    font-family:'Newsreader',serif;
-  }
+.topbar {
+    background: var(--accent);
+    padding: 10px 0;
+}
 
-  @media(max-width:680px){
-    .nav-inner{flex-direction:column;align-items:flex-start;gap:10px}
-    nav{width:100%;overflow-x:auto}
-    nav ul{flex-wrap:nowrap;gap:18px}
-    nav a{white-space:nowrap;font-size:14px}
-    body{font-size:17px}
-  }
+.topbar-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.wordmark {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: .5px;
+    color: #ffffff;
+    border: none;
+}
+
+.wordmark:hover {
+    color: #ffffff;
+    border: none;
+    opacity: .9;
+}
+
+.wordmark .sfu {
+    font-weight: 700;
+}
+
+/* =================================
+   HEADER AND NAVIGATION
+   ================================= */
+
+header {
+    border-bottom: 2px solid var(--accent);
+    background: var(--paper);
+}
+
+.nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.namewrap .brand {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--ink);
+    border: none;
+    display: block;
+    line-height: 1.15;
+}
+
+.namewrap .sub {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 15px;
+    color: var(--muted);
+    letter-spacing: .2px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+nav a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* =================================
+   MAIN CONTENT
+   ================================= */
+
+main {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+section {
+    padding: 34px 0;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 20px;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2.sec {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+/* =================================
+   TEACHING PHILOSOPHY
+   ================================= */
+
+.philosophy {
+    font-size: 17px;
+    line-height: 1.75;
+    margin-bottom: 28px;
+}
+
+.philosophy p {
+    margin-bottom: 16px;
+}
+
+.role-line {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+/* =================================
+   TEACHING AWARDS AND EVALUATIONS
+   ================================= */
+
+.awards-callout {
+    background: var(--soft);
+    border-left: 3px solid var(--accent);
+    padding: 20px 24px;
+    margin: 22px 0 4px;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.awards-callout strong {
+    color: var(--accent);
+}
+
+/* =================================
+   TEACHING DOCUMENTS
+   ================================= */
+
+.docs {
+    margin-top: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.docs a {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    background: var(--paper);
+    color: var(--accent);
+    transition: all .2s ease;
+}
+
+.docs a:first-child {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.docs a:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+    color: #ffffff;
+}
+
+/* =================================
+   FUTURE COURSE DEVELOPMENT
+   ================================= */
+
+.future-card {
+    background: var(--soft);
+    border-left: 3px solid var(--accent);
+    padding: 26px 28px;
+    margin-top: 30px;
+}
+
+.future-title {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.future-card p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.future-courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.future-course {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 15px;
+    font-family: 'Newsreader', Georgia, serif;
+    color: var(--ink);
+}
+
+/* =================================
+   TEACHING EXPERIENCE AND COURSES
+   ================================= */
+
+.area {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 18px;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 30px 0 16px;
+}
+
+.course {
+    margin-bottom: 14px;
+    line-height: 1.65;
+}
+
+.course .code {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.course .yrs {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.back-home {
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: 'Newsreader', Georgia, serif;
+}
+
+/* =================================
+   FOOTER
+   ================================= */
+
+footer {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 26px 28px 40px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+    font-family: 'Newsreader', Georgia, serif;
+    text-align: center;
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+   ================================= */
+
+@media (max-width: 760px) {
+
+    .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px 22px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 0 22px;
+    }
+
+    .namewrap .brand {
+        font-size: 28px;
+    }
+
+    .philosophy {
+        font-size: 16px;
+    }
+
+    .awards-callout {
+        padding: 18px 20px;
+    }
+
+    .future-card {
+        padding: 20px;
+    }
+
+    .future-courses {
+        flex-direction: column;
+    }
+
+    .future-course {
+        width: 100%;
+    }
+
+    .course .code {
+        font-size: 17px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    a {
+        transition: none;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- UNIVERSITY TOP BAR -->
+
 <div class="topbar">
-  <div class="topbar-inner">
-    <a class="wordmark" href="https://www.sfu.ca/" target="_blank" rel="noopener">
-      <span class="sfu">SFU</span> &nbsp;Simon Fraser University
-    </a>
-  </div>
+    <div class="topbar-inner">
+        <a class="wordmark"
+           href="https://www.sfu.ca/"
+           target="_blank"
+           rel="noopener">
+            <span class="sfu">SFU</span>
+            Simon Fraser University
+        </a>
+    </div>
 </div>
 
-<header>
-  <div class="nav-inner">
-    <div class="namewrap">
-      <a href="index.html" class="brand">Samuel Basoah</a>
-      <span class="sub">Ph.D. Candidate in Economics</span>
-    </div>
+<!-- HEADER AND NAVIGATION -->
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#jmp">Job Market Paper</a></li>
-        <li><a href="index.html#research">Research</a></li>
-        <li><a href="ml.html">ML / NLP</a></li>
-        <li><a href="teaching.html" class="active">Teaching</a></li>
-        <li><a href="experience.html">Industry & Research</a></li>
-      </ul>
-    </nav>
-  </div>
+<header>
+    <div class="nav-inner">
+
+        <div class="namewrap">
+            <a href="index.html" class="brand">
+                Samuel Basoah
+            </a>
+
+            <span class="sub">
+                Ph.D. Candidate in Economics
+            </span>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="index.html#jmp">Job Market Paper</a>
+                </li>
+
+                <li>
+                    <a href="index.html#research">Research</a>
+                </li>
+
+                <li>
+                    <a href="ml.html">ML / NLP</a>
+                </li>
+
+                <li>
+                    <a href="teaching.html" class="active">Teaching</a>
+                </li>
+
+                <li>
+                    <a href="experience.html">Industry &amp; Research</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
 </header>
 
 <main>
 
-  <section>
+<!-- TEACHING PHILOSOPHY -->
+
+<section>
+
     <h2 class="sec">Teaching Philosophy</h2>
 
     <div class="philosophy">
-      <p>My teaching philosophy is grounded in the belief that effective education empowers and transforms students, equipping them not only with knowledge but with the critical tools to solve real-world problems. I have served as a Teaching Assistant for 24 courses across 24 terms and play an active role in my department&rsquo;s study nights, workshops, and mentoring programs for students and new Teaching Assistants. My teaching interests include macroeconomics, international finance and trade, intermediate microeconomics, money and banking, public economics, econometrics, and environmental economics.</p>
 
-      <p>Since Fall 2022, I have served as a Head Teaching Assistant responsible for supporting and mentoring fellow TAs, and since 2024 I lead and co-organize the Economics Department&rsquo;s workshops for incoming Teaching Assistants. I have mentored 15 Teaching Assistants and consistently rank among the top five in the department&rsquo;s TA evaluations. In Spring 2026, I was nominated by SFU&rsquo;s Centre for Educational Excellence to present on how to run tutorials confidently, fairly, and professionally.</p>
+        <p>
+            My teaching philosophy is grounded in the belief that
+            effective education empowers and transforms students,
+            equipping them not only with knowledge but with the
+            critical tools to solve real-world problems. I have
+            served as a Teaching Assistant for 24 courses across
+            24 terms and play an active role in my department&rsquo;s
+            study nights, workshops, and mentoring programs for
+            students and new Teaching Assistants. My teaching
+            interests include macroeconomics, international
+            finance and trade, intermediate microeconomics,
+            money and banking, public economics, econometrics,
+            and environmental economics.
+        </p>
+
+        <p>
+            Since Fall 2022, I have served as a Head Teaching
+            Assistant responsible for supporting and mentoring
+            fellow TAs, and since 2024 I lead and co-organize
+            the Economics Department&rsquo;s workshops for incoming
+            Teaching Assistants. I have mentored 15 Teaching
+            Assistants and consistently rank among the top five
+            in the department&rsquo;s TA evaluations. In Spring 2026,
+            I was nominated by SFU&rsquo;s Centre for Educational
+            Excellence to present on how to run tutorials
+            confidently, fairly, and professionally.
+        </p>
+
     </div>
+
+    <!-- TEACHING AWARDS -->
 
     <div class="awards-callout">
-      <strong>Teaching Awards:</strong>
-      <a href="https://www.sfu.ca/economics/community/news/2024/07/teaching-awards-2024.html" target="_blank" rel="noopener">Terry Heaps Outstanding Teaching Assistant Award</a> (2024)
-      &middot;
-      <a href="https://www.sfu.ca/fass/news/2025/09/teaching-awards.html" target="_blank" rel="noopener">FASS Employee Achievement Award &ndash; Teaching Assistant</a> (2025)
-      &middot;
-      <a href="https://www.facebook.com/SFUEconomics/mentions/" target="_blank" rel="noopener">Video</a>
+
+        <strong>Teaching Awards:</strong>
+
+        <a href="https://www.sfu.ca/economics/community/news/2024/07/teaching-awards-2024.html"
+           target="_blank"
+           rel="noopener">
+            Terry Heaps Outstanding Teaching Assistant Award
+        </a> (2024)
+
+        &middot;
+
+        <a href="https://www.sfu.ca/fass/news/2025/09/teaching-awards.html"
+           target="_blank"
+           rel="noopener">
+            FASS Employee Achievement Award &ndash; Teaching Assistant
+        </a> (2025)
+
+        &middot;
+
+        <a href="https://www.facebook.com/SFUEconomics/mentions/"
+           target="_blank"
+           rel="noopener">
+            Video
+        </a>
+
     </div>
+
+    <!-- TEACHING EVALUATIONS -->
 
     <div class="awards-callout" style="margin-top:28px;">
-      <strong>Selected Teaching Evaluation Results:</strong><br>
-      Ranked <strong>1st of 46</strong> Teaching Assistants (Spring 2024),
-      <strong>4th of 20</strong> (Summer 2024),
-      <strong>9th of 40</strong> (Spring 2025), and
-      <strong>3rd of 16</strong> (Summer 2025).
+
+        <strong>Selected Teaching Evaluation Results:</strong>
+
+        <br>
+
+        Ranked <strong>1st of 46</strong> Teaching Assistants
+        (Spring 2024),
+
+        <strong>4th of 20</strong> (Summer 2024),
+
+        <strong>9th of 40</strong> (Spring 2025), and
+
+        <strong>3rd of 16</strong> (Summer 2025).
+
     </div>
 
-    <p class="docs">
-      <a href="Teaching_Statement_Finale.pdf" target="_blank" rel="noopener">Teaching Statement (PDF)</a>
-      <a href="Teaching_evaluation.pdf" target="_blank" rel="noopener">Teaching Evaluations (PDF)</a>
+    <!-- TEACHING DOCUMENTS -->
+
+    <div class="docs">
+
+        <a href="Teaching_Statement_Finale.pdf"
+           target="_blank"
+           rel="noopener">
+            Teaching Statement (PDF)
+        </a>
+
+        <a href="Teaching_evaluation.pdf"
+           target="_blank"
+           rel="noopener">
+            Teaching Evaluations (PDF)
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FUTURE COURSE DEVELOPMENT -->
+
+<div class="future-card">
+
+    <span class="future-title">
+        Future Course Development
+    </span>
+
+    <p>
+        I am eager to contribute to curriculum development
+        and design new courses, including:
     </p>
-  </section>
-  
-  <div class="future-card" style="background:#faf3f4;border-left:3px solid #CC0633;padding:18px 22px;margin-top:30px;border-radius:0 4px 4px 0;">
-  <span style="font-family:'Newsreader',serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#A6192E;font-weight:600;display:block;margin-bottom:6px;">Future Course Development</span>
-  <p style="font-size:15px;color:#333;margin:0 0 14px;">I am eager to contribute to curriculum development and design new courses, including:</p>
-  <div style="display:flex;flex-wrap:wrap;gap:10px;">
-    <span style="background:#fff;border:1px solid #e2e2e2;border-left:3px solid #CC0633;padding:7px 13px;font-size:14px;font-family:'Newsreader',serif;color:#1a1a1a;">Data (Textual) Analytics for Economists</span>
-    <span style="background:#fff;border:1px solid #e2e2e2;border-left:3px solid #CC0633;padding:7px 13px;font-size:14px;font-family:'Newsreader',serif;color:#1a1a1a;">Artificial Intelligence and Economics</span>
-    <span style="background:#fff;border:1px solid #e2e2e2;border-left:3px solid #CC0633;padding:7px 13px;font-size:14px;font-family:'Newsreader',serif;color:#1a1a1a;">Digital Government and Fiscal Capacity</span>
-  </div>
+
+    <div class="future-courses">
+
+        <span class="future-course">
+            Data (Textual) Analytics for Economists
+        </span>
+
+        <span class="future-course">
+            Artificial Intelligence and Economics
+        </span>
+
+        <span class="future-course">
+            Digital Government and Fiscal Capacity
+        </span>
+
+    </div>
+
 </div>
 
-  <section>
+<!-- TEACHING EXPERIENCE -->
+
+<section>
+
     <h2 class="sec">Courses</h2>
-    <div class="role-line">Teaching Assistant, Department of Economics, Simon Fraser University, 2019&ndash;2020 and 2021&ndash;2026</div>
 
-    <div class="area">Macroeconomics &amp; International Economics</div>
-    <div class="course"><span class="code">ECON 105 Principles of Macroeconomics</span> <span class="yrs">(Summer 2020, Spring 2022, Fall 2022, Spring 2023, Fall 2023 &middot; 5 terms)</span></div>
-    <div class="course"><span class="code">ECON 115 Introduction to Macroeconomics</span> <span class="yrs">(Spring 2024 &middot; 1 term)</span></div>
-    <div class="course"><span class="code">ECON 305 Intermediate Macroeconomic Theory</span> <span class="yrs">(Summer 2020 &middot; 1 term)</span></div>
-    <div class="course"><span class="code">ECON 310 Money and Banking</span> <span class="yrs">(Fall 2022 &middot; 1 term)</span></div>
-    <div class="course"><span class="code">ECON 345 International Finance</span> <span class="yrs">(Fall 2019, Spring 2020, Fall 2020 &middot; 3 terms)</span></div>
-    <div class="course"><span class="code">ECON 342 International Trade</span> <span class="yrs">(Summer 2024 &middot; 1 term)</span></div>
+    <div class="role-line">
+        Teaching Assistant, Department of Economics,
+        Simon Fraser University,
+        2019&ndash;2020 and 2021&ndash;2026
+    </div>
 
-    <div class="area">Development &amp; Public Economics</div>
-    <div class="course"><span class="code">ECON 355W Economic Development</span> <span class="yrs">(Fall 2021, Fall 2025 &middot; 2 terms)</span></div>
-    <div class="course"><span class="code">ECON 392 Public Economics: Role of Government</span> <span class="yrs">(Summer 2024, Summer 2025 &middot; 2 terms)</span></div>
+    <!-- MACROECONOMICS AND INTERNATIONAL ECONOMICS -->
 
-    <div class="area">Microeconomics &amp; Economic Communication</div>
-    <div class="course"><span class="code">ECON 113 Introduction to Microeconomics</span> <span class="yrs">(Spring 2024, Fall 2024, Spring 2025 &middot; 3 terms)</span></div>
-    <div class="course"><span class="code">ECON 220W Communication in Economics</span> <span class="yrs">(Fall 2025, Spring 2026 &middot; 2 terms)</span></div>
+    <div class="area">
+        Macroeconomics &amp; International Economics
+    </div>
 
-    <div class="area">Finance / Financial Econometrics</div>
-    <div class="course"><span class="code">ECON 818 Advanced Topics in Finance / Financial Econometrics (Ph.D. level)</span> <span class="yrs">(Fall 2024 &middot; 1 term)</span></div>
+    <div class="course">
+        <span class="code">
+            ECON 105 Principles of Macroeconomics
+        </span>
 
-    <div class="area">Interdisciplinary Teaching</div>
-    <div class="course"><span class="code">REM 321 Ecological Economics</span> <span class="yrs">(Fall 2022 &middot; 1 term)</span></div>
-    <div class="course"><span class="code">CRIM 220 Research Methods in Criminology</span> <span class="yrs">(Fall 2021, Fall 2022 &middot; 2 terms)</span></div>
-    
-    <p style="margin-top:30px;font-size:15px">
-      <a href="index.html">&larr; Back to home</a>
+        <span class="yrs">
+            (Summer 2020, Spring 2022, Fall 2022,
+            Spring 2023, Fall 2023 &middot; 5 terms)
+        </span>
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 115 Introduction to Macroeconomics
+        </span>
+
+        <span class="yrs">
+            (Spring 2024 &middot; 1 term)
+        </span>
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 305 Intermediate Macroeconomic Theory
+        </span>
+
+        <span class="yrs">
+            (Summer 2020 &middot; 1 term)
+        </span>
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 310 Money and Banking
+        </span>
+
+        <span class="yrs">
+            (Fall 2022 &middot; 1 term)
+        </span>
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 345 International Finance
+        </span>
+
+        <span class="yrs">
+            (Fall 2019, Spring 2020,
+            Fall 2020 &middot; 3 terms)
+        </span>
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 342 International Trade
+        </span>
+
+        <span class="yrs">
+            (Summer 2024 &middot; 1 term)
+        </span>
+    </div>
+
+    <!-- DEVELOPMENT AND PUBLIC ECONOMICS -->
+
+    <div class="area">
+        Development &amp; Public Economics
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 355W Economic Development
+        </span>
+
+        <span class="yrs">
+            (Fall 2021, Fall 2025 &middot; 2 terms)
+        </span>
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 392 Public Economics: Role of Government
+        </span>
+
+        <span class="yrs">
+            (Summer 2024, Summer 2025 &middot; 2 terms)
+        </span>
+    </div>
+
+    <!-- MICROECONOMICS AND ECONOMIC COMMUNICATION -->
+
+    <div class="area">
+        Microeconomics &amp; Economic Communication
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 113 Introduction to Microeconomics
+        </span>
+
+        <span class="yrs">
+            (Spring 2024, Fall 2024,
+            Spring 2025 &middot; 3 terms)
+        </span>
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 220W Communication in Economics
+        </span>
+
+        <span class="yrs">
+            (Fall 2025, Spring 2026 &middot; 2 terms)
+        </span>
+    </div>
+
+    <!-- FINANCE AND FINANCIAL ECONOMETRICS -->
+
+    <div class="area">
+        Finance / Financial Econometrics
+    </div>
+
+    <div class="course">
+        <span class="code">
+            ECON 818 Advanced Topics in Finance /
+            Financial Econometrics (Ph.D. level)
+        </span>
+
+        <span class="yrs">
+            (Fall 2024 &middot; 1 term)
+        </span>
+    </div>
+
+    <!-- INTERDISCIPLINARY TEACHING -->
+
+    <div class="area">
+        Interdisciplinary Teaching
+    </div>
+
+    <div class="course">
+        <span class="code">
+            REM 321 Ecological Economics
+        </span>
+
+        <span class="yrs">
+            (Fall 2022 &middot; 1 term)
+        </span>
+    </div>
+
+    <div class="course">
+        <span class="code">
+            CRIM 220 Research Methods in Criminology
+        </span>
+
+        <span class="yrs">
+            (Fall 2021, Fall 2022 &middot; 2 terms)
+        </span>
+    </div>
+
+    <p class="back-home">
+        <a href="index.html">&larr; Back to home</a>
     </p>
-  </section>
+
+</section>
 
 </main>
 
-<footer>&copy; 2026 Samuel Basoah &middot; Simon Fraser University &middot; Last updated June 2026</footer>
+<!-- FOOTER -->
+
+<footer>
+    &copy; 2026 Samuel Basoah &middot;
+    Simon Fraser University &middot;
+    Last updated November 2026
+</footer>
 
 </body>
 </html>
