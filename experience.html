@@ -1,177 +1,624 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Industry &amp; Research — Samuel Basoah</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --ink:#1a1a1a;
-    --muted:#54585a;
-    --line:#e2e2e2;
-    --paper:#ffffff;
-    --sfu-red:#CC0633;
-    --sfu-dark-red:#A6192E;
-    --soft:#faf3f4;
-    --maxw:1040px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--paper);color:var(--ink);
-    font-family:'Spectral',Georgia,serif;font-size:18px;line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:var(--sfu-dark-red);text-decoration:none;border-bottom:1px solid rgba(166,25,46,.25);transition:border-color .2s,color .2s}
-  a:hover{border-color:var(--sfu-dark-red);color:var(--sfu-red)}
 
-  .topbar{background:var(--sfu-red);padding:10px 0}
-  .topbar-inner{max-width:var(--maxw);margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:14px}
-  .wordmark{font-family:'Newsreader',serif;font-weight:600;font-size:18px;letter-spacing:.5px;color:#fff;border:none}
-  .wordmark:hover{color:#fff;border:none;opacity:.9}
-  .wordmark .sfu{font-weight:700}
+/* =================================
+   ACADEMIC WEBSITE COLOUR PALETTE
+   ================================= */
 
-  header{border-bottom:2px solid var(--sfu-red);background:var(--paper);position:sticky;top:0;z-index:10}
-  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:20px 28px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px}
-  .namewrap .brand{font-family:'Newsreader',serif;font-size:26px;font-weight:600;color:var(--ink);border:none;display:block;line-height:1.1}
-  .namewrap .sub{font-style:italic;color:var(--muted);font-size:16px}
-  nav ul{list-style:none;display:flex;gap:24px;flex-wrap:wrap}
-  nav a{font-family:'Newsreader',serif;font-size:15px;color:var(--muted);border:none;letter-spacing:.3px;padding-bottom:3px;border-bottom:2px solid transparent}
-  nav a:hover{color:var(--sfu-red)}
-  nav a.active{color:var(--sfu-red);border-bottom-color:var(--sfu-red)}
+:root {
+    --ink: #222222;
+    --muted: #555555;
+    --line: #e2e2e2;
+    --paper: #ffffff;
+    --accent: #800020;
+    --accent-dark: #650019;
+    --soft: #f7f7f7;
+    --maxw: 1080px;
+}
 
-  main{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  section{padding:46px 0;border-bottom:1px solid var(--line)}
-  section:last-of-type{border-bottom:none}
-  h2.sec{font-family:'Newsreader',serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--sfu-red);margin-bottom:22px}
+html {
+    scroll-behavior: smooth;
+}
 
-  .role{margin-bottom:28px}
-  .role .rtitle{font-family:'Newsreader',serif;font-size:19px;font-weight:600;line-height:1.3}
-  .role .rmeta{color:var(--muted);font-size:15px;font-style:italic;margin:2px 0 8px}
-  .role ul{list-style:none;padding:0;margin:0}
-  .role li{position:relative;padding-left:18px;margin-bottom:6px;font-size:16px;color:#333}
-  .role li::before{content:"\2022";position:absolute;left:0;color:var(--sfu-red)}
-  .role li .ach{font-weight:600;color:var(--sfu-dark-red)}
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Spectral', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
 
-  footer{max-width:var(--maxw);margin:0 auto;padding:30px 28px 56px;color:var(--muted);font-size:14px;font-family:'Newsreader',serif}
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(128, 0, 32, 0.20);
+    transition: color .2s, border-color .2s;
+}
 
-  @media(max-width:680px){
-    .nav-inner{flex-direction:column;align-items:flex-start;gap:10px}
-    nav{width:100%;overflow-x:auto}
-    nav ul{flex-wrap:nowrap;gap:18px}
-    nav a{white-space:nowrap;font-size:14px}
-    body{font-size:17px}
-  }
+a:hover {
+    color: var(--accent-dark);
+    border-bottom-color: var(--accent-dark);
+}
+
+/* =================================
+   UNIVERSITY TOP BAR
+   ================================= */
+
+.topbar {
+    background: var(--accent);
+    padding: 10px 0;
+}
+
+.topbar-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.wordmark {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: .5px;
+    color: #ffffff;
+    border: none;
+}
+
+.wordmark:hover {
+    color: #ffffff;
+    border: none;
+    opacity: .9;
+}
+
+.wordmark .sfu {
+    font-weight: 700;
+}
+
+/* =================================
+   HEADER AND NAVIGATION
+   ================================= */
+
+header {
+    border-bottom: 2px solid var(--accent);
+    background: var(--paper);
+}
+
+.nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.namewrap .brand {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--ink);
+    border: none;
+    display: block;
+    line-height: 1.15;
+}
+
+.namewrap .sub {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 15px;
+    color: var(--muted);
+    letter-spacing: .2px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+nav a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* =================================
+   MAIN CONTENT
+   ================================= */
+
+main {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+section {
+    padding: 34px 0;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 20px;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2.sec {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+/* =================================
+   INDUSTRY AND RESEARCH EXPERIENCE
+   ================================= */
+
+.role {
+    margin-bottom: 28px;
+}
+
+.role .rtitle {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--ink);
+    margin-bottom: 8px;
+}
+
+.role .rmeta {
+    color: var(--muted);
+    font-size: 15px;
+    font-style: italic;
+    margin: 2px 0 12px;
+}
+
+.role ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.role li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333333;
+}
+
+.role li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* =================================
+   PROFESSIONAL ACHIEVEMENTS
+   ================================= */
+
+.role li .ach {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.back-home {
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: 'Newsreader', Georgia, serif;
+}
+
+/* =================================
+   FOOTER
+   ================================= */
+
+footer {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 26px 28px 40px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+    font-family: 'Newsreader', Georgia, serif;
+    text-align: center;
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+   ================================= */
+
+@media (max-width: 760px) {
+
+    .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px 22px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 0 22px;
+    }
+
+    .namewrap .brand {
+        font-size: 28px;
+    }
+
+    .role .rtitle {
+        font-size: 21px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    a {
+        transition: none;
+    }
+}
+
 </style>
 </head>
+
 <body>
 
+<!-- UNIVERSITY TOP BAR -->
+
 <div class="topbar">
-  <div class="topbar-inner">
-    <a class="wordmark" href="https://www.sfu.ca/" target="_blank" rel="noopener"><span class="sfu">SFU</span> &nbsp;Simon Fraser University</a>
-  </div>
+    <div class="topbar-inner">
+        <a class="wordmark"
+           href="https://www.sfu.ca/"
+           target="_blank"
+           rel="noopener">
+            <span class="sfu">SFU</span>
+            Simon Fraser University
+        </a>
+    </div>
 </div>
 
+<!-- HEADER AND NAVIGATION -->
+
 <header>
-  <div class="nav-inner">
-    <div class="namewrap">
-      <a href="index.html" class="brand">Samuel Basoah</a>
-      <span class="sub">Ph.D. Candidate in Economics</span>
+    <div class="nav-inner">
+
+        <div class="namewrap">
+            <a href="index.html" class="brand">
+                Samuel Basoah
+            </a>
+
+            <span class="sub">
+                Ph.D. Candidate in Economics
+            </span>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="index.html#jmp">Job Market Paper</a>
+                </li>
+
+                <li>
+                    <a href="index.html#research">Research</a>
+                </li>
+
+                <li>
+                    <a href="ml.html">ML / NLP</a>
+                </li>
+
+                <li>
+                    <a href="teaching.html">Teaching</a>
+                </li>
+
+                <li>
+                    <a href="experience.html" class="active">
+                        Industry &amp; Research
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#jmp">Job Market Paper</a></li>
-        <li><a href="index.html#research">Research</a></li>
-        <li><a href="ml.html">ML / NLP</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="experience.html" class="active">Industry &amp; Research</a></li>
-      </ul>
-    </nav>
-  </div>
 </header>
 
 <main>
-  <section>
+
+<!-- =================================
+     INDUSTRY EXPERIENCE
+     ================================= -->
+
+<section>
+
     <h2 class="sec">Industry Experience</h2>
 
-    <div class="role">
-      <div class="rtitle">Power BI &amp; R Training Specialist &mdash; Pacific Economic Development Canada</div>
-      <div class="rmeta">Dec 2023 &ndash; Mar 2024</div>
-      <ul>
-        <li>Led a cross-functional team to automate interactive dashboards and reporting workflows using R and Power BI for government stakeholders.</li>
-        <li>Resolved advanced Power BI data-modeling and visualization issues in analytical training sessions.</li>
-        <li>Co-developed training modules with a senior economic policy analyst for policy analysts and operations staff.</li>
-        <li>Trained participants to build analytical tools for policy communication and data-driven decision-making.</li>
-      </ul>
-    </div>
+    <!-- PACIFIC ECONOMIC DEVELOPMENT CANADA -->
 
     <div class="role">
-      <div class="rtitle">Senior Analyst, Risk Management and Finance Division &mdash; Canada Mortgage and Housing Corporation (CMHC)</div>
-      <div class="rmeta">Dec 2021 &ndash; Dec 2022</div>
-      <ul>
-        <li>Produced recurring analytical reports for senior management using Power BI and R.</li>
-        <li>Built dashboards, risk indicators, and reporting pipelines from large administrative datasets using SQL, R, and Power BI.</li>
-        <li>Advised management on risk exposure using insights from time-series analysis.</li>
-        <li><span class="ach">Achievement:</span> Automated a reporting pipeline, improving output efficiency by 95%.</li>
-      </ul>
+
+        <div class="rtitle">
+            Power BI &amp; R Training Specialist &mdash;
+            Pacific Economic Development Canada
+        </div>
+
+        <div class="rmeta">
+            Dec 2023 &ndash; Mar 2024
+        </div>
+
+        <ul>
+            <li>
+                Led a cross-functional team to automate
+                interactive dashboards and reporting workflows
+                using R and Power BI for government stakeholders.
+            </li>
+
+            <li>
+                Resolved advanced Power BI data-modeling and
+                visualization issues in analytical training sessions.
+            </li>
+
+            <li>
+                Co-developed training modules with a senior
+                economic policy analyst for policy analysts
+                and operations staff.
+            </li>
+
+            <li>
+                Trained participants to build analytical tools
+                for policy communication and data-driven
+                decision-making.
+            </li>
+        </ul>
+
     </div>
+
+    <!-- CANADA MORTGAGE AND HOUSING CORPORATION -->
 
     <div class="role">
-      <div class="rtitle">Senior Data Specialist &mdash; Qatalyst</div>
-      <div class="rmeta">Jun 2021 &ndash; Aug 2021</div>
-      <ul>
-        <li>Analyzed COVID-19 employer survey responses and delivered analytical summaries to internal research leadership.</li>
-      </ul>
-    </div>
-  </section>
 
-  <section>
+        <div class="rtitle">
+            Senior Analyst, Risk Management and Finance Division
+            &mdash; Canada Mortgage and Housing Corporation (CMHC)
+        </div>
+
+        <div class="rmeta">
+            Dec 2021 &ndash; Dec 2022
+        </div>
+
+        <ul>
+            <li>
+                Produced recurring analytical reports for
+                senior management using Power BI and R.
+            </li>
+
+            <li>
+                Built dashboards, risk indicators, and
+                reporting pipelines from large administrative
+                datasets using SQL, R, and Power BI.
+            </li>
+
+            <li>
+                Advised management on risk exposure using
+                insights from time-series analysis.
+            </li>
+
+            <li>
+                <span class="ach">Achievement:</span>
+                Automated a reporting pipeline, improving
+                output efficiency by 95%.
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- QATALYST -->
+
+    <div class="role">
+
+        <div class="rtitle">
+            Senior Data Specialist &mdash; Qatalyst
+        </div>
+
+        <div class="rmeta">
+            Jun 2021 &ndash; Aug 2021
+        </div>
+
+        <ul>
+            <li>
+                Analyzed COVID-19 employer survey responses
+                and delivered analytical summaries to
+                internal research leadership.
+            </li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- =================================
+     RESEARCH EXPERIENCE
+     ================================= -->
+
+<section>
+
     <h2 class="sec">Research Experience</h2>
 
-    <div class="role">
-      <div class="rtitle">Graduate Research Assistant &mdash; Simon Fraser University</div>
-      <div class="rmeta">Feb 2026 &ndash; Present</div>
-      <ul>
-        <li>Designed and implemented a randomized survey experiment to evaluate behavioral responses to wildfire risk information across British Columbia.</li>
-        <li>Developed regional and province (state) wide wildfire risk maps for British Columbia.</li>
-        <li>Developed geospatial classification algorithms covering 122,000+ postal codes to support large scale experimental deployment and regional analysis.</li>
-      </ul>
-    </div>
+    <!-- WILDFIRE RISK RESEARCH -->
 
     <div class="role">
-      <div class="rtitle">Graduate Research Assistant &mdash; Simon Fraser University</div>
-      <div class="rmeta">May 2025 &ndash; Sep 2025</div>
-      <ul>
-        <li>Merged crime and homelessness datasets in R to evaluate the effect of temporary modular housing on neighborhood crime outcomes.</li>
-      </ul>
+
+        <div class="rtitle">
+            Graduate Research Assistant &mdash;
+            Simon Fraser University
+        </div>
+
+        <div class="rmeta">
+            Feb 2026 &ndash; Present
+        </div>
+
+        <ul>
+            <li>
+                Designed and implemented a randomized survey
+                experiment to evaluate behavioral responses
+                to wildfire risk information across
+                British Columbia.
+            </li>
+
+            <li>
+                Developed regional and province (state) wide
+                wildfire risk maps for British Columbia.
+            </li>
+
+            <li>
+                Developed geospatial classification algorithms
+                covering 122,000+ postal codes to support
+                large scale experimental deployment and
+                regional analysis.
+            </li>
+        </ul>
+
     </div>
+
+    <!-- HOUSING AND CRIME RESEARCH -->
 
     <div class="role">
-      <div class="rtitle">Graduate Research Assistant &mdash; Beedie School of Business, Simon Fraser University</div>
-      <div class="rmeta">Jan 2023 &ndash; Sep 2023</div>
-      <ul>
-        <li>Reviewed regulatory literature on bank runs and deposit insurance.</li>
-        <li>Estimated credit risk models using logistic, probit, and OLS techniques on firm-level data.</li>
-      </ul>
+
+        <div class="rtitle">
+            Graduate Research Assistant &mdash;
+            Simon Fraser University
+        </div>
+
+        <div class="rmeta">
+            May 2025 &ndash; Sep 2025
+        </div>
+
+        <ul>
+            <li>
+                Merged crime and homelessness datasets in R
+                to evaluate the effect of temporary modular
+                housing on neighborhood crime outcomes.
+            </li>
+        </ul>
+
     </div>
+
+    <!-- BEEDIE SCHOOL OF BUSINESS -->
 
     <div class="role">
-      <div class="rtitle">Junior Research Associate &mdash; University of Sussex</div>
-      <div class="rmeta">Jun 2017 &ndash; Aug 2017</div>
-      <ul>
-        <li>Conducted literature synthesis, data cleaning, and model estimation for research presentations.</li>
-      </ul>
+
+        <div class="rtitle">
+            Graduate Research Assistant &mdash;
+            Beedie School of Business, Simon Fraser University
+        </div>
+
+        <div class="rmeta">
+            Jan 2023 &ndash; Sep 2023
+        </div>
+
+        <ul>
+            <li>
+                Reviewed regulatory literature on bank runs
+                and deposit insurance.
+            </li>
+
+            <li>
+                Estimated credit risk models using logistic,
+                probit, and OLS techniques on firm-level data.
+            </li>
+        </ul>
+
     </div>
 
-    <p style="margin-top:30px;font-size:15px"><a href="index.html">&larr; Back to home</a></p>
-  </section>
+    <!-- UNIVERSITY OF SUSSEX -->
+
+    <div class="role">
+
+        <div class="rtitle">
+            Junior Research Associate &mdash;
+            University of Sussex
+        </div>
+
+        <div class="rmeta">
+            Jun 2017 &ndash; Aug 2017
+        </div>
+
+        <ul>
+            <li>
+                Conducted literature synthesis, data cleaning,
+                and model estimation for research presentations.
+            </li>
+        </ul>
+
+    </div>
+
+    <p class="back-home">
+        <a href="index.html">&larr; Back to home</a>
+    </p>
+
+</section>
+
 </main>
 
-<footer>&copy; 2026 Samuel Basoah &middot; Simon Fraser University &middot; Last updated June 2026</footer>
+<!-- FOOTER -->
+
+<footer>
+    &copy; 2026 Samuel Basoah &middot;
+    Simon Fraser University &middot;
+    Last updated November 2026
+</footer>
+
 </body>
 </html>
