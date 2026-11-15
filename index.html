@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Samuel Basoah — Ph.D. Candidate in Economics</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Spectral:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
   :root{
     --ink:#1a1a1a;
@@ -122,154 +123,140 @@
     .profile h1{font-size:28px}
     body{font-size:17px}
   }
+
+/* Academic job market layout */
+:root{--maxw:1080px;--soft:#faf7f7}
+body{font-size:17px;line-height:1.65}
+header{position:static}
+.nav-inner{align-items:center;gap:20px}
+nav ul{gap:18px}
+.profile-flank{grid-template-columns:245px minmax(0,1fr);gap:52px;padding:46px 0 36px;align-items:start}
+.flank-center{text-align:left}
+.flank-center .portrait{width:100%;height:auto;aspect-ratio:240/308;object-fit:cover;object-position:center 30%;margin:0 0 18px}
+.flank-center .social-icons{justify-content:flex-start;gap:14px}
+.flank-center .contact-block{font-size:14px;overflow-wrap:anywhere}
+.flank-center .flank-h{margin-top:24px!important}
+.flank-right{font-size:17px;line-height:1.7}
+.flank-right .bio{margin-bottom:16px}
+.flank-right .flank-h{font-size:24px;letter-spacing:0;text-transform:none;color:var(--ink);margin:22px 0 12px}
+.market-status{font-size:21px;line-height:1.4;color:var(--sfu-dark-red);margin:0 0 14px}
+.market-links{display:flex;flex-wrap:wrap;gap:10px 20px;margin-bottom:14px;font-weight:600;font-size:16px}
+.academic-info{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;padding:28px 0;border-bottom:1px solid var(--line)}
+.academic-info .ref-mini{font-size:16px}
+section{padding:32px 0;scroll-margin-top:20px}
+h2.sec{font-size:23px;letter-spacing:0;text-transform:none;color:var(--ink);margin-bottom:16px}
+.jmp{background:transparent;padding:0 0 0 20px}
+.jmp .abstract{font-size:16px;margin-top:10px}
+@media(max-width:760px){.profile-flank{grid-template-columns:1fr;gap:26px;padding:28px 0}.flank-center .portrait{width:200px}.flank-right{font-size:16px}.academic-info{grid-template-columns:1fr;gap:24px}.market-status{font-size:19px}nav ul{flex-wrap:wrap}.nav-inner{align-items:flex-start}main{padding:0 22px}}
 </style>
 </head>
 <body>
-
 <div class="topbar">
-  <div class="topbar-inner">
-    <a class="wordmark" href="https://www.sfu.ca/" target="_blank" rel="noopener"><span class="sfu">SFU</span> &nbsp;Simon Fraser University</a>
-  </div>
+<div class="topbar-inner">
+<a class="wordmark" href="https://www.sfu.ca/" rel="noopener" target="_blank"><span class="sfu">SFU</span>  Simon Fraser University</a>
 </div>
-
+</div>
 <header>
-  <div class="nav-inner">
-    <div class="namewrap">
-      <a href="index.html" class="brand">Samuel Basoah</a>
-      <span class="sub">Ph.D. Candidate in Economics</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="index.html#jmp">Job Market Paper</a></li>
-        <li><a href="index.html#research">Research</a></li>
-        <li><a href="ml.html">ML / NLP</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="experience.html">Industry &amp; Research</a></li>
-      </ul>
-    </nav>
-  </div>
+<div class="nav-inner">
+<div class="namewrap">
+<a class="brand" href="index.html">Samuel Basoah</a>
+<span class="sub">Ph.D. Candidate in Economics</span>
+</div>
+<nav>
+<ul>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="index.html#jmp">Job Market Paper</a></li>
+<li><a href="index.html#research">Research</a></li>
+<li><a href="ml.html">ML / NLP</a></li>
+<li><a href="teaching.html">Teaching</a></li>
+<li><a href="experience.html">Industry &amp; Research</a></li>
+</ul>
+</nav>
+</div>
 </header>
-
 <main id="top">
+<div class="profile-flank">
 
-  <div class="profile-flank">
-    <div class="flank-col flank-left">
-      <h2 class="flank-h">Research &amp; Teaching Interests</h2>
-      <div class="field-line"><span class="lbl">Primary</span> International Macroeconomics, Banking/Financial Economics, Machine Learning (NLP) </div>
-      <div class="field-line"><span class="lbl">Secondary</span> Environmental Economics, Applied Time Series (Bayesian) Econometrics, Applied Artificial Intelligence </div>
 
-      <h2 class="flank-h" style="margin-top:26px">References</h2>
-      <div class="ref-mini"><strong>Prof. Luba Petersen </strong> <br><a href="mailto:luba_petersen@sfu.ca">luba_petersen@sfu.ca</a></div>
-      <div class="ref-mini"><strong>Prof. Minjie Deng </strong><br><a href="mailto:minjied@sfu.ca">minjied@sfu.ca</a></div>
 
-      <h2 class="flank-h" style="margin-top:26px">Contact</h2>
-      <div class="contact-block">
-        Department of Economics, Simon Fraser University<br>
-        8888 University Drive, Burnaby, BC V5A 1S6<br>
-        <a href="mailto:samuel_basoah@sfu.ca">samuel_basoah@sfu.ca</a>
-      </div>
-    </div>
+<div class="flank-center">
+<img alt="Samuel Basoah" class="portrait" onerror="this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.alt='Photo';" src="Pic_JMP.jpeg"/>
 
-    <div class="flank-center">
-      <img class="portrait" src="Pic_JMP.jpeg" alt="Samuel Basoah" onerror="this.style.display='flex';this.style.alignItems='center';this.style.justifyContent='center';this.alt='Photo';">
-      <div class="quicklinks">
-        <a href="cv.pdf">CV</a>
-        <a href="#">Scholar</a>
-        <a href="#">SSRN</a>
-      </div>
-      <div class="social-icons">
-        <a class="spin" href="https://www.linkedin.com/in/samuel-basoah-42323a180/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
-        <a class="spin" href="https://github.com/Samuel-basoah" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg></a>
-      </div>
-    </div>
-
-    <div class="flank-col flank-right">
-      <h2 class="flank-h">About</h2>
-     
+<div class="social-icons">
+<a aria-label="LinkedIn" class="spin" href="https://www.linkedin.com/in/samuel-basoah-42323a180/" rel="noopener" target="_blank" title="LinkedIn"><svg aria-hidden="true" fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg></a>
+<a aria-label="GitHub" class="spin" href="https://github.com/Samuel-basoah" rel="noopener" target="_blank" title="GitHub"><svg aria-hidden="true" fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path></svg></a>
+</div>
+<h2 class="flank-h" style="margin-top:26px">Contact</h2><div class="contact-block">
+        Department of Economics, Simon Fraser University<br/>
+        8888 University Drive, Burnaby, BC V5A 1S6<br/>
+<a href="mailto:samuel_basoah@sfu.ca">samuel_basoah@sfu.ca</a>
+</div></div><div class="flank-col flank-right"><p class="market-status">
+<strong>I am on the 2026–2027 Economics Job Market.</strong>
+</p><div class="market-links"><a href="cv.pdf">Curriculum Vitae (PDF)</a> <a href="#jmp">Job Market Paper</a></div>
+<h2 class="flank-h">About</h2>
 <p class="bio">
   I am a Ph.D. candidate in Economics at 
-  <a href="https://www.sfu.ca/economics.html" target="_blank" rel="noopener">Simon Fraser University</a>. 
+  <a href="https://www.sfu.ca/economics.html" rel="noopener" target="_blank">Simon Fraser University</a>. 
   My research interests lie in banking, financial stability, and international macroeconomics, with a particular focus on how supervisory communication, sovereign risk, and digital state capacity shape financial markets and fiscal outcomes. I also conduct research on how wildfire risk information influences household preparedness using a randomized controlled trial (RCT).
 </p>
-
 <p class="bio">
   Previously, I worked as a Senior Analyst in the Finance and Risk Management Department at the Canada Mortgage and Housing Corporation (CMHC) and as a Data Analytics Consultant and Training Specialist for Pacific Economic Development Canada.
 </p>
-
 <p class="bio">
   I hold an M.A. in Economics from Simon Fraser University and a B.A. in Economics from the University of Ghana, where I was recognized as the best student in Economics in both 2018 and 2019. During my undergraduate studies, I also participated in an exchange program at the University of Sussex.
 </p>
 
-<p class="bio">
-  <strong>I am on the 2026–2027 Economics Job Market.</strong>
-</p>
-    </div>
-  </div>
+</div></div><div class="academic-info"><div><h2 class="flank-h">Research &amp; Teaching Interests</h2><div class="field-line"><span class="lbl">Primary</span> International Macroeconomics, Banking/Financial Economics, Machine Learning (NLP) </div><div class="field-line"><span class="lbl">Secondary</span> Environmental Economics, Applied Time Series (Bayesian) Econometrics, Applied Artificial Intelligence </div></div><div><h2 class="flank-h">References</h2><div class="ref-mini"><strong>Prof. Luba Petersen </strong> <br/><a href="mailto:luba_petersen@sfu.ca">luba_petersen@sfu.ca</a></div><div class="ref-mini"><strong>Prof. Minjie Deng </strong><br/><a href="mailto:minjied@sfu.ca">minjied@sfu.ca</a></div></div></div>
+<section id="jmp">
+<h2 class="sec">Job Market Paper</h2>
+<div class="jmp">
 
-  <section id="jmp">
-    <h2 class="sec">Job Market Paper</h2>
-    <div class="jmp">
-      <span class="badge">Job Market Paper</span>
-      <h3> Supervisory Communication, Bank Behavior, and Financial Stability: A Machine Learning (Textual) Approach </h3>
-      <p class="abstract"> This paper studies whether bank supervisory communication affects financial markets, bank balance sheets, and bank failure risk. I construct a novel supervisory sentiment index using machine learning and natural language processing applied to FDIC speeches, statements, testimonies, and supervisory communications from 1978 to 2025. To address limitations of standard dictionary-based sentiment measures in financial settings, I develop a sentence-based supervisory dictionary that incorporates phrase-level and contextual information specific to banking supervision.
+<h3> Supervisory Communication, Bank Behavior, and Financial Stability: A Machine Learning (Textual) Approach </h3>
+<p class="abstract"> This paper studies whether bank supervisory communication affects financial markets, bank balance sheets, and bank failure risk. I construct a novel supervisory sentiment index using machine learning and natural language processing applied to FDIC speeches, statements, testimonies, and supervisory communications from 1978 to 2025. To address limitations of standard dictionary-based sentiment measures in financial settings, I develop a sentence-based supervisory dictionary that incorporates phrase-level and contextual information specific to banking supervision.
 
 Using event-study methods, I show that financial markets respond systematically to FDIC communication. More positive supervisory sentiment predicts higher bank stock returns around communication dates and contains information beyond standard asset pricing factors. These effects are substantially stronger for large banks.
 
 I next examine the real effects of supervisory sentiment on bank outcomes using bank-level panel regressions and identified supervisory sentiment shocks. More positive sentiment improves profitability, liquidity, asset quality, and capital adequacy, while reducing non-performing assets and loan-loss reserves. The evidence suggests that supervisory communication operates through depositor confidence and flight-to-quality channels, generating deposit inflows and stronger balance sheet positions for perceived safer banks. Local projection estimates show that positive supervisory shocks generate persistent improvements in bank balance sheets, particularly among large banks.
 
-Finally, I study whether supervisory sentiment predicts bank failure. Logistic models controlling for CAMELS indicators, macroeconomic conditions, and crisis periods show that more positive supervisory sentiment significantly lowers the probability of bank failure in the United States by approximately 5%. The effects are strongest for large banks, consistent with informational advantages and &ldquo;too-big-to-fail&rdquo; dynamics.
+Finally, I study whether supervisory sentiment predicts bank failure. Logistic models controlling for CAMELS indicators, macroeconomic conditions, and crisis periods show that more positive supervisory sentiment significantly lowers the probability of bank failure in the United States by approximately 5%. The effects are strongest for large banks, consistent with informational advantages and “too-big-to-fail” dynamics.
 
 Overall, the findings suggest that supervisory communication is an important and underexplored channel through which regulators influence bank behavior and financial stability.</p>
-      <div class="links">
-        <a href="jmp.pdf">Download Paper (PDF)</a>
-        <a href="#">Slides</a>
-        <a href="#">Online Appendix</a>
-      </div>
-    </div>
-  </section>
+<div class="links">
+<a href="jmp.pdf">Download Paper (PDF)</a>
 
-  <section id="research">
-    <h2 class="sec">Research</h2>
-    <div class="paper">
-      <h3>Digital Government and Sovereign Default Risk: Tax Enforcement, Revenue Diversion, and Fiscal Capacity </h3>
-    <div class="status">Working Paper, 2026</div>
-      <p class="abstract"> This paper analyzes how government adoption of digital technologies shapes sovereign default risk through its effect on tax enforcement and revenue diversion. Using cross-country data for 46 economies, I find that higher digital adoption is associated with significantly lower sovereign spreads and higher government tax revenue, robust to controls for institutional quality and corruption. Exploiting a novel database of digital fiscal reforms, constructed by applying natural language processing to PEFA assessments to identify reform types and implementation dates, staggered difference in differences with entropy balanced weights suggest that digital fiscal reforms broadly improve tax revenue following implementation. A sovereign default model in which tax administrators divert revenue and digital capacity raises both the probability of detecting diversion and the penalty conditional on detection aligns with these results. Calibrated via the simulated method of moments, the quantitative analysis suggests that digital investment substantially lowers spreads, curbs diversion, and generates large welfare gains, particularly for highly indebted governments.</p>
-      <div class="paper-links"><a href="#">PDF</a><a href="#">SSRN</a></div>
-    </div>
-    <div class="paper">
-      <h3>When Sovereigns Fear Default: Why Central Banks Turn to Gold </h3>
-      <div class="status">Working Paper, 2026</div>
-      <p class="abstract"> This paper examines how sovereign default risk affects the composition of central bank reserve portfolios, with a particular focus on the share of reserves allocated to gold. Using an annual panel of 52 countries over the period 1997–2020, I combine dynamic panel GMM, instrumental variable Tobit, local projections, and event study designs to estimate the effect of sovereign default risk, measured by the Emerging Market Bond Index (EMBI), on the gold share of reserves. To address a previously overlooked dimension of reserve management, I construct a country-level dataset on the currency composition of official reserves and test whether reserve currency allocation explains the relationship between sovereign default risk and gold reserve allocation.
+
+</div>
+</div>
+</section>
+<section id="research">
+<h2 class="sec">Research</h2>
+<div class="paper">
+<h3>Digital Government and Sovereign Default Risk: Tax Enforcement, Revenue Diversion, and Fiscal Capacity </h3>
+<div class="status">Working Paper, 2026</div>
+<p class="abstract"> This paper analyzes how government adoption of digital technologies shapes sovereign default risk through its effect on tax enforcement and revenue diversion. Using cross-country data for 46 economies, I find that higher digital adoption is associated with significantly lower sovereign spreads and higher government tax revenue, robust to controls for institutional quality and corruption. Exploiting a novel database of digital fiscal reforms, constructed by applying natural language processing to PEFA assessments to identify reform types and implementation dates, staggered difference in differences with entropy balanced weights suggest that digital fiscal reforms broadly improve tax revenue following implementation. A sovereign default model in which tax administrators divert revenue and digital capacity raises both the probability of detecting diversion and the penalty conditional on detection aligns with these results. Calibrated via the simulated method of moments, the quantitative analysis suggests that digital investment substantially lowers spreads, curbs diversion, and generates large welfare gains, particularly for highly indebted governments.</p>
+<div class="paper-links"></div>
+</div>
+<div class="paper">
+<h3>When Sovereigns Fear Default: Why Central Banks Turn to Gold </h3>
+<div class="status">Working Paper, 2026</div>
+<p class="abstract"> This paper examines how sovereign default risk affects the composition of central bank reserve portfolios, with a particular focus on the share of reserves allocated to gold. Using an annual panel of 52 countries over the period 1997–2020, I combine dynamic panel GMM, instrumental variable Tobit, local projections, and event study designs to estimate the effect of sovereign default risk, measured by the Emerging Market Bond Index (EMBI), on the gold share of reserves. To address a previously overlooked dimension of reserve management, I construct a country-level dataset on the currency composition of official reserves and test whether reserve currency allocation explains the relationship between sovereign default risk and gold reserve allocation.
 The results show that higher sovereign default risk leads central banks to allocate a larger share of reserves to gold. This relationship remains robust after accounting for reserve currency composition, indicating that it is not driven by shifts in foreign currency reserve holdings. Higher sovereign default risk is also associated with declines in both non-gold reserve holdings and the non-gold share of reserves, consistent with active reserve portfolio reallocation toward gold rather than valuation effects. Event study estimates show that the gold share of reserves increases following sovereign default crises and debt restructuring episodes, particularly around the onset of private creditor restructurings. Deteriorating domestic financial market conditions, reflected in lower stock market capitalization and trading activity, emerge as an important channel through which sovereign default risk increases the gold share of reserves. Overall, the findings identify sovereign default risk as an important determinant of central bank reserve composition and provide new evidence on the precautionary role of gold in reserve management.</p>
-      <div class="paper-links"><a href="#">PDF</a></div>
-    </div>
-    <div class="subhead" style="margin-top:30px">Works in Progress</div>
-    <div class="paper">
-      <h3>Wildfire Risk Information and Public Preparedness in British Columbia: A Randomized Controlled Trial (RCT) Approach (with Prof. Luba Petersen)</h3>
-      <div class="status">Status: Survey rollout phase</div>
-    </div>
-    <div class="paper">
-      <h3>Predicting Bank Failures in the U.S. with Regulatory Indices: A Text-Based Approach</h3>
-    </div>
-    <div class="paper">
-      <h3>Natural Disaster and Deposit Insurance Premium Pricing</h3>
-    </div>
-  </section>
-
+<div class="paper-links"></div>
+</div>
+<div class="subhead" style="margin-top:30px">Works in Progress</div>
+<div class="paper">
+<h3>Wildfire Risk Information and Public Preparedness in British Columbia: A Randomized Controlled Trial (RCT) Approach (with Prof. Luba Petersen)</h3>
+<div class="status">Status: Survey rollout phase</div>
+</div>
+<div class="paper">
+<h3>Predicting Bank Failures in the U.S. with Regulatory Indices: A Text-Based Approach</h3>
+</div>
+<div class="paper">
+<h3>Natural Disaster and Deposit Insurance Premium Pricing</h3>
+</div>
+</section>
 </main>
+<footer>© 2026 Samuel Basoah · Simon Fraser University · Last updated November 2026</footer>
 
-<footer>&copy; 2026 Samuel Basoah &middot; Simon Fraser University &middot; Last updated June 2026</footer>
-
-<script>
-(function(){
-  var blocks=document.querySelectorAll('main > section, main > .profile, main > .profile-flank, main > .info-row');
-  blocks.forEach(function(b){b.classList.add('reveal');});
-  if('IntersectionObserver' in window){
-    var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}});},{threshold:0.1});
-    blocks.forEach(function(b){o.observe(b);});
-  } else { blocks.forEach(function(b){b.classList.add('in');}); }
-})();
-</script>
 </body>
 </html>
